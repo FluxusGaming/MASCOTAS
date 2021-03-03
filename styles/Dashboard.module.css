@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f4ce48;
+  min-height: 100vh;
+  width: 100%;
+}
+.want__adopt__title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #402e32;
+  text-align: center;
+}
+.pet__cards__container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.8rem;
+  place-items: center;
+  margin: 1rem 0 0 0;
+}
+.pet__card {
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  border-radius: 5px;
+  width: 18rem;
+  height: fit-content;
+  padding: 0 0 1rem 0;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+}
+.pet__img {
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  height: 16rem;
+}
+.pet__title {
+  width: 100%;
+  text-align: center;
+  margin: 0.4rem 0;
+}
+.pet__description {
+  padding: 0 0 0.6rem 0.8rem;
+}
+.adopt__btn {
+  align-self: center;
+}
+
+@media screen and (max-width: 768px) {
+  .pet__cards__container {
+    margin: 1rem 0 5rem 0;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .pet__cards__container {
+    margin: 1rem 0 5rem 0;
+  }
+}

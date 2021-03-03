@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+.login__container {
+  display: grid;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  height: 85%;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "contenedorformulario imagen";
+  background: #f4ce48;
+}
+.form__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  grid-area: "contenedorformulario";
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 28rem;
+  min-width: 20rem;
+  width: 50%;
+  background: #fafafa;
+  padding: 2rem 0;
+  border-radius: 5px;
+}
+.form__title {
+  font-weight: 700;
+  margin: 0;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12.5rem;
+  min-width: 75%;
+  margin: 0.5rem;
+}
+.form__inputs label {
+  font-family: "Open Sans";
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.dog__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  grid-area: imagen;
+  border-radius: 5px;
+}
+.forgot__container {
+  font-family: "Open Sans";
+  font-weight: 600;
+  text-align: center;
+}
+.forgot__container p {
+  padding: 0.3rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.forgot__container span {
+  color: #318ee3;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .login__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "imagen"
+      "contenedorformulario";
+    height: 95%;
+    width: 95%;
+  }
+  .form {
+    width: 100%;
+    height: 100%;
+  }
+  .form__container {
+    justify-content: flex-start;
+    padding: 0 0.8rem 0.8rem 0.8rem;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .login__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "contenedorformulario imagen";
+    height: 100%;
+    width: 100%;
+  }
+  .form {
+    padding: 0.5rem 0;
+    height: 18rem;
+  }
+  .form__container {
+    justify-content: center;
+  }
+}
