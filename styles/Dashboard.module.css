@@ -59,27 +59,27 @@
 }
 
 @media screen and (max-width: 768px) {
-  .pet__cards__container {
-    margin: 1rem 0;
-  }
   .container {
     min-height: calc(100vh - 4rem);
+    padding: 0 0 4rem 0;
   }
-
   .main {
     min-height: calc(100vh - 4rem);
+  }
+  .pet__cards__container {
+    margin: 1rem 0;
   }
 }
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
-  .pet__cards__container {
-    margin: 1rem 0;
-  }
   .container {
     min-height: calc(100vh - 4rem);
+    padding: 0 0 4rem 0;
   }
-
   .main {
     min-height: calc(100vh - 4rem);
+  }
+  .pet__cards__container {
+    margin: 1rem 0;
   }
 }
