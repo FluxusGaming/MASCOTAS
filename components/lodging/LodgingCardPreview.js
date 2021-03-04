@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../../styles/Hospedaje/Hospedaje.module.css";
+import styles from "../../styles/Hospedaje/hospedaje.module.css";
 import {
   FaDog,
   FaShoppingBasket,
