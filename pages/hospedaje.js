@@ -1,6 +1,6 @@
 import Lodging from "../components/lodging/LodgingCard";
 import Head from "next/head";
-import styles from "../styles/Hospedaje/Hospedaje.module.css";
+import styles from "../styles/Hospedaje/hospedaje.module.css";
 import Navbar from "../components/navbar/Navbar";
 export default function hospedaje() {
   return (
