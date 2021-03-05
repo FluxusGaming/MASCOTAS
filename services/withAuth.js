@@ -1,14 +1,17 @@
 import { useRouter } from "next/router";
 import Loading from "../components/Loading/Loading";
+import { useWhoami } from "../services/User";
 const withAuth = (Component) => {
   const Auth = (props) => {
+    const { data: user, isLoading } = useWhoami();
     const router = useRouter();
-    const isLoggedIn = false;
+    if (isLoading) return <Loading />;
 
     // If user is not logged in, return login component
-    if (!isLoggedIn) {
+    console.log(user.error);
+    if (user.error) {
       if (typeof window !== "undefined") {
-        router.push("/404");
+        router.push("/login");
       }
       return <Loading />;
     }

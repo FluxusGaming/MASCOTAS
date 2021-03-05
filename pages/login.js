@@ -5,14 +5,16 @@ import Button from "@material-ui/core/Button";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { UseLogin } from "../services/Auth";
+import { useRouter } from "next/router";
 export default function Home() {
+  const router = useRouter();
   const { register, handleSubmit } = useForm();
   const { mutateAsync: login } = UseLogin();
   const onSubmit = async (values) => {
     try {
       await console.log(values);
       await login(values);
-      await console.log("Logueado");
+      await router.push("/");
     } catch (err) {
       console.log(err);
     }

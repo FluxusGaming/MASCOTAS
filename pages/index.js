@@ -3,7 +3,6 @@ import Navbar from "../components/navbar/Navbar";
 import styles from "../styles/landing.module.css";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
-import withAuth from "../services/withAuth";
 function index() {
   return (
     <div className={styles.container}>
@@ -67,4 +66,4 @@ function index() {
     </div>
   );
 }
-export default withAuth(index);
+export default index;

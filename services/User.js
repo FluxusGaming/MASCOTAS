@@ -1,5 +1,5 @@
 import { useQuery } from "react-query";
-import axios from "config/api";
+import axios from "../config/api";
 axios.defaults.withCredentials = true;
 
 export const getWhoami = () =>

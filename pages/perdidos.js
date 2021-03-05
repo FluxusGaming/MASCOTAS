@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Dashboard.module.css";
 import PetCardLost from "../components/lost/PetCardLost";
 import Navbar from "../components/navbar/Navbar";
-
-export default function perdidos() {
+import withAuth from "../services/withAuth";
+function perdidos() {
   return (
     <div className={styles.container}>
       <Head>
@@ -69,3 +69,4 @@ export default function perdidos() {
     </div>
   );
 }
+export default withAuth(perdidos);
