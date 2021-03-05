@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 900px) and (orientation: landscape) {
+@media screen and (max-width: 900px) {
   .container {
     min-height: calc(100vh - 4rem);
     padding: 0 0 4rem 0;
