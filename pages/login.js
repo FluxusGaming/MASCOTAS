@@ -3,7 +3,20 @@ import styles from "../styles/Home.module.css";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { UseLogin } from "../services/Auth";
 export default function Home() {
+  const { register, handleSubmit } = useForm();
+  const { mutateAsync: login } = UseLogin();
+  const onSubmit = async (values) => {
+    try {
+      await console.log(values);
+      await login(values);
+      await console.log("Logueado");
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +26,12 @@ export default function Home() {
       <div className={styles.main}>
         <div className={styles.login__container}>
           <div className={styles.form__container}>
-            <form className={styles.form} noValidate autoComplete="off">
+            <form
+              className={styles.form}
+              noValidate
+              autoComplete="off"
+              onSubmit={handleSubmit(onSubmit)}
+            >
               <h1 className={styles.form__title}>MascotyAPP</h1>
               <div className={styles.form__inputs}>
                 <label>Usuario</label>
@@ -23,6 +41,10 @@ export default function Home() {
                   color="secondary"
                   id="standard-error-helper-text"
                   error={false}
+                  InputProps={{
+                    inputRef: register({ required: true }),
+                    name: "username",
+                  }}
                 />
                 <label>Contraseña</label>
                 <TextField
@@ -31,6 +53,10 @@ export default function Home() {
                   color="secondary"
                   type="password"
                   error={false}
+                  InputProps={{
+                    inputRef: register({ required: true }),
+                    name: "password",
+                  }}
                 />
               </div>
               {/* <p className={styles.error__text}>
@@ -41,6 +67,7 @@ export default function Home() {
                 variant="contained"
                 color="secondary"
                 style={{ height: "3rem", width: "50%" }}
+                type="submit"
               >
                 Entrar
               </Button>

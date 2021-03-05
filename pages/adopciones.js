@@ -2,8 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Dashboard.module.css";
 import PetCard from "../components/adopt/PetCard";
 import Navbar from "../components/navbar/Navbar";
-
-export default function adopciones() {
+import withAuth from "../services/withAuth";
+function adopciones() {
   return (
     <div className={styles.container}>
       <Head>
@@ -63,3 +63,5 @@ export default function adopciones() {
     </div>
   );
 }
+
+export default withAuth(adopciones);
