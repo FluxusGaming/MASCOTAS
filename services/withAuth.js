@@ -8,7 +8,8 @@ const withAuth = (Component) => {
     if (isLoading) return <Loading />;
 
     // If user is not logged in, return login component
-    if (user && user?.error) {
+
+    if (!user || user?.error) {
       if (typeof window !== "undefined") {
         router.push("/login");
       }
