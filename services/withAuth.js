@@ -8,8 +8,7 @@ const withAuth = (Component) => {
     if (isLoading) return <Loading />;
 
     // If user is not logged in, return login component
-    console.log(user.error);
-    if (user.error) {
+    if (user?.error) {
       if (typeof window !== "undefined") {
         router.push("/login");
       }
@@ -17,7 +16,7 @@ const withAuth = (Component) => {
     }
 
     // If user is logged in, return original component
-    return <Component {...props} />;
+    return <Component {...props} user={user} />;
   };
 
   // Copy getInitial props so it will run as well

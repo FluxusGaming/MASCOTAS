@@ -3,7 +3,8 @@ import styles from "../styles/Dashboard.module.css";
 import PetCardLost from "../components/lost/PetCardLost";
 import Navbar from "../components/navbar/Navbar";
 import withAuth from "../services/withAuth";
-function perdidos() {
+function perdidos({ user }) {
+  console.log(user);
   return (
     <div className={styles.container}>
       <Head>
