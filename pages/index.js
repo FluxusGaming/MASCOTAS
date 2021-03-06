@@ -3,7 +3,11 @@ import Navbar from "../components/navbar/Navbar";
 import styles from "../styles/landing.module.css";
 import Button from "@material-ui/core/Button";
 import Link from "next/link";
+import Loading from "../components/Loading/Loading";
+import { useWhoami } from "../services/User";
 function index() {
+  const { data: user, isLoading } = useWhoami();
+  if (isLoading) return <Loading />;
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +15,7 @@ function index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar />
+        <Navbar user={user} />
         <div className={styles.hero}>
           <div className={styles.hero__text}>
             <h1>Adoptá</h1>

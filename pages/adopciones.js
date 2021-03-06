@@ -3,7 +3,7 @@ import styles from "../styles/Dashboard.module.css";
 import PetCard from "../components/adopt/PetCard";
 import Navbar from "../components/navbar/Navbar";
 import withAuth from "../services/withAuth";
-function adopciones() {
+function adopciones({ user }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +11,7 @@ function adopciones() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar />
+        <Navbar user={user} />
         {/* <h1 className={styles.want__adopt__title}>¿Quieres Adoptar?</h1> */}
         <div className={styles.pet__cards__container}>
           <PetCard

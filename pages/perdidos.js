@@ -4,7 +4,6 @@ import PetCardLost from "../components/lost/PetCardLost";
 import Navbar from "../components/navbar/Navbar";
 import withAuth from "../services/withAuth";
 function perdidos({ user }) {
-  console.log(user);
   return (
     <div className={styles.container}>
       <Head>
@@ -12,7 +11,7 @@ function perdidos({ user }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.main}>
-        <Navbar />
+        <Navbar user={user} />
         {/* <h1 className={styles.want__adopt__title}>
           Estoy Perdido/a ¿Me Ayudas?
         </h1> */}

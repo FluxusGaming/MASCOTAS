@@ -9,8 +9,10 @@ import {
   FaBriefcaseMedical,
 } from "react-icons/fa";
 import Logo from "../../public/img/svg/logo__huella.svg";
+import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
-export default function Navbar() {
+import Dropdown from "./Dropdown";
+export default function Navbar({ user }) {
   return (
     <div className={styles.navbar}>
       <Logo className={styles.logo} />
@@ -47,35 +49,42 @@ export default function Navbar() {
             </p>
           </Link>
         </div>
-        <div className={styles.login__and__register__btn}>
-          <Link href="/login">
-            <Button
-              variant="outlined"
-              style={{
-                color: "primary",
-                fontWeight: 600,
-                height: "2.4rem",
-                width: "6.5rem",
-              }}
-            >
-              Ingresá
-            </Button>
-          </Link>
-          <Link href="/login">
-            <Button
-              variant="contained"
-              style={{
-                background: "#000000",
-                color: "#ffffff",
-                fontWeight: 600,
-                height: "2.4rem",
-                width: "6.5rem",
-              }}
-            >
-              Regístrate
-            </Button>
-          </Link>
-        </div>
+        {user && !user?.error && (
+          <div className={styles.navbar__avatar}>
+            <Dropdown />
+          </div>
+        )}
+        {(!user || user?.error) && (
+          <div className={styles.login__and__register__btn}>
+            <Link href="/login">
+              <Button
+                variant="outlined"
+                style={{
+                  color: "primary",
+                  fontWeight: 600,
+                  height: "2.4rem",
+                  width: "6.5rem",
+                }}
+              >
+                Ingresá
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button
+                variant="contained"
+                style={{
+                  background: "#000000",
+                  color: "#ffffff",
+                  fontWeight: 600,
+                  height: "2.4rem",
+                  width: "6.5rem",
+                }}
+              >
+                Regístrate
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
