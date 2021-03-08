@@ -3,9 +3,11 @@ import styles from "../../styles/Navbar.module.css";
 import Link from "next/link";
 import {
   FaHome,
+  FaTwitter,
   FaDog,
   FaMap,
   FaWalking,
+  FaPaw,
   FaBriefcaseMedical,
 } from "react-icons/fa";
 import Logo from "../../public/img/svg/logo__huella.svg";
@@ -22,6 +24,12 @@ export default function Navbar({ user }) {
             <p>
               <FaHome className={styles.navbar__icon} />
               <span className={styles.navbar__text}>INICIO</span>
+            </p>
+          </Link>
+          <Link href="/social">
+            <p>
+              <FaTwitter className={styles.navbar__icon} />
+              <span className={styles.navbar__text}>SOCIAL</span>
             </p>
           </Link>
           <Link href="/adopciones">
@@ -44,16 +52,13 @@ export default function Navbar({ user }) {
           </Link>
           <Link href="/hospedaje">
             <p>
-              <FaBriefcaseMedical className={styles.navbar__icon} />
+              <FaPaw className={styles.navbar__icon} />
               <span className={styles.navbar__text}>HOSPEDAJE</span>
             </p>
           </Link>
+
+          {user && !user?.error && <Dropdown />}
         </div>
-        {user && !user?.error && (
-          <div className={styles.navbar__avatar}>
-            <Dropdown />
-          </div>
-        )}
         {(!user || user?.error) && (
           <div className={styles.login__and__register__btn}>
             <Link href="/login">
