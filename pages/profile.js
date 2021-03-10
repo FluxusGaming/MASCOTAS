@@ -16,7 +16,7 @@ function profile({ user }) {
         <div className={styles.profile__banner}>
           <img
             className={styles.profile__banner__img}
-            src="https://www.freewebheaders.com/wp-content/gallery/dogs/yellow-labrador-puppies-in-garden-web-header.jpg"
+            src="https://i1.wp.com/pet-care.co.za/wp-content/uploads/2018/07/Pet-Care-Banner.jpg?ssl=1"
           ></img>
           <div className={styles.profile__avatar}>
             <Avatar
