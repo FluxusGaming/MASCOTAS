@@ -1,0 +1,73 @@
+.feed__card {
+  display: flex;
+  flex-direction: column;
+  background: #fafafa;
+  border-radius: 5px;
+  width: 18rem;
+  height: fit-content;
+  box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
+}
+
+.feed__card__user__bar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 1rem;
+}
+.feed__card__username {
+  margin: 0 0 0 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+.feed__card__img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.feed__card__more {
+  font-size: 1.8rem;
+}
+.feed__card__bottom__bar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 4rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.feed__card__icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.feed__card__icons > svg {
+  margin: 0 0.4rem;
+}
+.feed__card__likes {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0.2rem 0.4rem 0;
+}
+/* Modal */
+.feed_card__modal__options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.feed_card__modal__options p {
+  border-bottom: 1px solid #dbdbdb;
+  padding: 1rem 3rem;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+/* Modal */
+.feed_card__modal__report {
+  color: red;
+  font-weight: 600;
+}

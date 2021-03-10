@@ -30,7 +30,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "contenedorformulario imagen";
-  background: #f4ce48;
+  background: var(--main);
 }
 .form__container {
   display: flex;

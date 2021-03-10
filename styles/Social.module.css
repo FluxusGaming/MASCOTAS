@@ -1,0 +1,28 @@
+.social__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.social__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--main);
+  min-height: 100vh;
+  width: 100%;
+}
+
+.social__cards__container {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 0.8rem;
+  place-items: center;
+  margin: 1rem 0 0 0;
+}

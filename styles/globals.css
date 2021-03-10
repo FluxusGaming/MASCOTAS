@@ -27,6 +27,10 @@ p {
   box-sizing: border-box;
 }
 
+:root {
+  --main: #eed202;
+}
+
 /* @media screen and (max-width: 768px) {
   #__next {
     padding: 0 0 4rem 0;

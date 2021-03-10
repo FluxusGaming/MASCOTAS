@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: #f4ce48;
+  background: var(--main);
 }
 
 .main {
