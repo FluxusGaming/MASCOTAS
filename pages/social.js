@@ -23,4 +23,4 @@ function social({ user }) {
   );
 }
 
-export default withAuth(social);
+export default social;
